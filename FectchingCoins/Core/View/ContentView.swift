@@ -14,7 +14,21 @@ struct ContentView: View {
        
         List {
             ForEach(viewModel.coins) { coin in
-                Text(coin.name)
+                HStack {
+                    Text("\(coin.marketCapRank)")
+                        .foregroundStyle(.gray)
+                    VStack (alignment: .leading) {
+                        
+                        Text(coin.name)
+                            .fontWeight(.semibold)
+                        Text(coin.symbol)
+                    }
+                }
+            }
+        }
+        .overlay {
+            if let error = viewModel.errorMessage {
+                Text(error)
             }
         }
     }
