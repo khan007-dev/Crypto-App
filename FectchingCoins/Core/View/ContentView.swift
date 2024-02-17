@@ -8,12 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var viewModel = CoinsViewModel()
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            
+            if let errorMessage = viewModel.errorMessage {
+               Text(errorMessage)
+            } else { 
+                
+                Text(" \(viewModel.coins) \(viewModel.price)")
+            }
+        
         }
         .padding()
     }
