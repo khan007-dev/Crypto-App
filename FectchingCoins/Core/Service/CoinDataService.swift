@@ -9,7 +9,7 @@ import Foundation
 class CoinDataService {
     let urlString = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=chf&order=market_cap_desc&per_page=20&page=1&sparkline=false&price_change_percentage=24h&locale=en"
     
-    let detialsUrlString = "https://api.coingecko.com/api/v3/coins/bitcoin?localization=false&tickers=false&market_data=false&community_data=false&developer_data=false&sparkline=false"
+   
     
     func fetchCoins()  async throws -> [Coin] {
         guard let url = URL(string: urlString) else {return []}
@@ -45,6 +45,8 @@ class CoinDataService {
     
     func fetchCoinDetials(id: String) async throws -> CoinDetial? {
         
+
+        let detialsUrlString = "https://api.coingecko.com/api/v3/coins/\(id)?localization=false&tickers=false&market_data=false&community_data=false&developer_data=false&sparkline=false"
         guard let url = URL(string: detialsUrlString) else {return nil }
         
         
@@ -72,9 +74,6 @@ class CoinDataService {
             print("DEBUG: \(error)")
             throw error as? CoinApiError ?? .unknownError(error: error)
         }
-        
-        
-        
         
     }
 }

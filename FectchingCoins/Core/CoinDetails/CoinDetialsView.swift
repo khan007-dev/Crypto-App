@@ -11,6 +11,7 @@ struct CoinDetialsView: View {
     
     let coin: Coin
     @ObservedObject var viewModel: CoinDetialViewModel
+
     init(coin: Coin) {
         self.coin = coin
         self.viewModel = CoinDetialViewModel(coinId: coin.id)
@@ -18,7 +19,25 @@ struct CoinDetialsView: View {
     var body: some View {
      
         VStack {
-            Text(coin.name)
+            if let detials = viewModel.coinDetials {
+                Text(detials.name)
+                    .fontWeight(.semibold)
+                    .font(.subheadline)
+                
+                Text(detials.symbol.uppercased())
+                    .font(.footnote)
+            
+                Text(detials.description.text)
+                .font(.footnote)
+                .padding(.vertical)
+         
+            }
+        
+        }.task {
+             await viewModel.fetchCoinDetials()
         }
+        .padding()
+       
+      
     }
 }
