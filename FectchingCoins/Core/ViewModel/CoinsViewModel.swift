@@ -15,15 +15,24 @@ class CoinsViewModel: ObservableObject {
     init() {
     
         Task {
-           try await fetchCoins()
+            await fetchCoins()
         }
     }
     
-    func fetchCoins() async throws {
-        self.coins = try await service.fetchCoins()
+    @MainActor
+    func fetchCoins() async  {
+  
+        do {
+            self.coins = try await service.fetchCoins()
+        } catch {
+            
+            guard let error = error as? CoinApiError else { return}
+            self.errorMessage = error.customDescription
+        }
     
     }
     
+  
     func fetchCoinsWithCompletionHandler() {
 
         service.fetchCoinsWithResult { [weak self ]result in

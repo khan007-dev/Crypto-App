@@ -16,13 +16,26 @@ class CoinDataService {
         
         do {
             
-            let (data, _) = try await URLSession.shared.data(from: url)
+            let (data, response) = try await URLSession.shared.data(from: url)
+            
+            guard let httpResponse = response as? HTTPURLResponse else {
+               throw CoinApiError.requestFailed(description: "Request Failed")
+                           
+            }
+            
+            guard httpResponse.statusCode == 200  else {
+                             
+            throw CoinApiError.invalidStatusCode(statusCode: httpResponse.statusCode)
+                      
+            }
+            
             let coins = try JSONDecoder().decode([Coin].self, from: data)
             return coins
         } catch {
         
-            print("DEBUG: \(error.localizedDescription)")
-            return []
+            print("DEBUG: \(error)")
+            throw error as? CoinApiError ?? .unknownError(error: error)
+        
         }
         
      
