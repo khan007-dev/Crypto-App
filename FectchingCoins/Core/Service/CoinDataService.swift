@@ -9,6 +9,8 @@ import Foundation
 class CoinDataService {
     let urlString = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=chf&order=market_cap_desc&per_page=20&page=1&sparkline=false&price_change_percentage=24h&locale=en"
     
+    let detialsUrlString = "https://api.coingecko.com/api/v3/coins/bitcoin?localization=false&tickers=false&market_data=false&community_data=false&developer_data=false&sparkline=false"
+    
     func fetchCoins()  async throws -> [Coin] {
         guard let url = URL(string: urlString) else {return []}
         
@@ -19,28 +21,64 @@ class CoinDataService {
             let (data, response) = try await URLSession.shared.data(from: url)
             
             guard let httpResponse = response as? HTTPURLResponse else {
-               throw CoinApiError.requestFailed(description: "Request Failed")
-                           
+                throw CoinApiError.requestFailed(description: "Request Failed")
+                
             }
             
             guard httpResponse.statusCode == 200  else {
-                             
-            throw CoinApiError.invalidStatusCode(statusCode: httpResponse.statusCode)
-                      
+                
+                throw CoinApiError.invalidStatusCode(statusCode: httpResponse.statusCode)
+                
             }
             
             let coins = try JSONDecoder().decode([Coin].self, from: data)
             return coins
         } catch {
-        
+            
             print("DEBUG: \(error)")
             throw error as? CoinApiError ?? .unknownError(error: error)
-        
+            
         }
         
-     
+        
+    }
+    
+    func fetchCoinDetials(id: String) async throws -> CoinDetial? {
+        
+        guard let url = URL(string: detialsUrlString) else {return nil }
+        
+        
+        let (data, response) = try await URLSession.shared.data(from: url)
+        
+        guard let httpResponse = response as? HTTPURLResponse else {
+            throw CoinApiError.requestFailed(description: "Request Failed")
+            
+        }
+        
+        guard httpResponse.statusCode == 200  else {
+            
+            throw CoinApiError.invalidStatusCode(statusCode: httpResponse.statusCode)
+            
+        }
+        
+        do {
+            let details = try JSONDecoder().decode(CoinDetial.self, from: data)
+            return details
+            
+        }
+        
+        catch {
+            
+            print("DEBUG: \(error)")
+            throw error as? CoinApiError ?? .unknownError(error: error)
+        }
+        
+        
+        
+        
     }
 }
+
 
 // MARK: Completion Handlers
 extension CoinDataService {

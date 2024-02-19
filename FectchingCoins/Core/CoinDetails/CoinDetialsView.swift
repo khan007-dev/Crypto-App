@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct CoinDetialsView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    
+    let coin: Coin
+    @ObservedObject var viewModel: CoinDetialViewModel
+    init(coin: Coin) {
+        self.coin = coin
+        self.viewModel = CoinDetialViewModel(coinId: coin.id)
     }
-}
-
-#Preview {
-    CoinDetialsView()
+    var body: some View {
+     
+        VStack {
+            Text(coin.name)
+        }
+    }
 }
