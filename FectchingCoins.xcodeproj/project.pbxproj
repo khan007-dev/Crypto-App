@@ -21,6 +21,7 @@
 		C97F0F412B834BE200F1BB57 /* CoinDetialsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F0F402B834BE200F1BB57 /* CoinDetialsView.swift */; };
 		C97F0F442B8353D700F1BB57 /* CoinDetial.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F0F432B8353D700F1BB57 /* CoinDetial.swift */; };
 		C97F0F472B8359A000F1BB57 /* CoinDetialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F0F462B8359A000F1BB57 /* CoinDetialViewModel.swift */; };
+		C97F0F4C2B84976800F1BB57 /* HTTPDataDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F0F4B2B84976800F1BB57 /* HTTPDataDownloader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		C97F0F402B834BE200F1BB57 /* CoinDetialsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetialsView.swift; sourceTree = "<group>"; };
 		C97F0F432B8353D700F1BB57 /* CoinDetial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetial.swift; sourceTree = "<group>"; };
 		C97F0F462B8359A000F1BB57 /* CoinDetialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetialViewModel.swift; sourceTree = "<group>"; };
+		C97F0F4B2B84976800F1BB57 /* HTTPDataDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPDataDownloader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				C97F0EF42B7C280C00F1BB57 /* FectchingCoins */,
+				C97F0F492B84973100F1BB57 /* Shared */,
 				C97F0F052B7C280F00F1BB57 /* FectchingCoinsTests */,
 				C97F0F0F2B7C280F00F1BB57 /* FectchingCoinsUITests */,
 				C97F0EF32B7C280C00F1BB57 /* Products */,
@@ -218,6 +221,22 @@
 				C97F0F462B8359A000F1BB57 /* CoinDetialViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C97F0F492B84973100F1BB57 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C97F0F4A2B84973C00F1BB57 /* API */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		C97F0F4A2B84973C00F1BB57 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				C97F0F4B2B84976800F1BB57 /* HTTPDataDownloader.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +373,7 @@
 				C97F0EF82B7C280C00F1BB57 /* ContentView.swift in Sources */,
 				C97F0F252B7C35CB00F1BB57 /* CoinsViewModel.swift in Sources */,
 				C97F0F3C2B80C1F800F1BB57 /* Coin.swift in Sources */,
+				C97F0F4C2B84976800F1BB57 /* HTTPDataDownloader.swift in Sources */,
 				C97F0F3E2B81DB3000F1BB57 /* CoinApiError.swift in Sources */,
 				C97F0F442B8353D700F1BB57 /* CoinDetial.swift in Sources */,
 				C97F0F412B834BE200F1BB57 /* CoinDetialsView.swift in Sources */,
