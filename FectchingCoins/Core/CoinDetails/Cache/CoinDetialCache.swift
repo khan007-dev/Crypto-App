@@ -6,9 +6,9 @@
 //
 
 import Foundation
-class CoinDetialCahce {
+class CoinDetialCache {
     
-    static let shared = CoinDetialCahce()
+    static let shared = CoinDetialCache()
     
     private let cache = NSCache<NSString, NSData>()
     

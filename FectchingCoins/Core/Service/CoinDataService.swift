@@ -29,12 +29,24 @@ class CoinDataService: HTTPDataDownloader {
     
     func fetchCoinDetials(id: String) async throws -> CoinDetial? {
         
+        if let cached = CoinDetialCache.shared.get(forKey: id) {
+            
+            print("DEBUG: Got Detials from cache ")
+            
+            return cached
+        }
+    
         guard let endPoint = coinDetialsURLString(id: id) else
         {
+          
             throw CoinApiError.requestFailed(description: "Invalid EndPoint")
         }
         
-        return try await fetchData(as: CoinDetial.self, endpoint: endPoint)
+        let detials = try await fetchData(as: CoinDetial.self, endpoint: endPoint)
+        print("DEBUG: Got Detials from API ")
+        CoinDetialCache.shared.set(detials, forKey: id)
+        
+        return detials
         
       }
     
