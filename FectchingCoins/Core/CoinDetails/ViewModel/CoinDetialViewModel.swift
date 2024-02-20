@@ -22,13 +22,10 @@ class CoinDetialViewModel: ObservableObject {
     
     @MainActor
     func fetchCoinDetials() async  {
-        try? await Task.sleep(nanoseconds: 2_000_000_000)
-        print("DEBUG: Task wake up")
+      
         do
         {
-            let detials = try await service.fetchCoinDetials(id: coinId)
-            print("DEBUG: Detials \(detials)")
-            self.coinDetials = detials
+            self.coinDetials = try await service.fetchCoinDetials(id: coinId)
         }
         catch {
         
