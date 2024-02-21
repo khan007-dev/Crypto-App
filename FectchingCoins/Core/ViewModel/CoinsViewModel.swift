@@ -11,9 +11,9 @@ class CoinsViewModel: ObservableObject {
     
     @Published var coins = [Coin]()
     @Published var errorMessage: String?
-    private let service = CoinDataService()
-    init() {
-    
+    private let service: CoinDataService
+    init(service: CoinDataService) {
+        self.service = service
         Task {
             await fetchCoins()
         }

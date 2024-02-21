@@ -12,9 +12,9 @@ struct CoinDetialsView: View {
     let coin: Coin
     @ObservedObject var viewModel: CoinDetialViewModel
 
-    init(coin: Coin) {
+    init(coin: Coin, service: CoinDataService) {
         self.coin = coin
-        self.viewModel = CoinDetialViewModel(coinId: coin.id)
+        self.viewModel = CoinDetialViewModel(coinId: coin.id, service: service)
     }
     var body: some View {
      

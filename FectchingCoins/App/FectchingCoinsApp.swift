@@ -11,7 +11,7 @@ import SwiftUI
 struct FectchingCoinsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(service: CoinDataService())
         }
     }
 }
