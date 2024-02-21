@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    private let service: CoinDataService
+    private let service: CoinServiceProtocol
     @StateObject var viewModel: CoinsViewModel
     
-    init(service: CoinDataService) {
+    init(service: CoinServiceProtocol) {
         self.service = service
         self._viewModel = StateObject(wrappedValue: CoinsViewModel(service: service))
     }

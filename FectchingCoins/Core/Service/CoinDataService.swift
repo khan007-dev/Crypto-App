@@ -7,7 +7,11 @@
 
 import Foundation
 
-class CoinDataService: HTTPDataDownloader {
+protocol CoinServiceProtocol {
+    func fetchCoins() async throws -> [Coin]
+    func fetchCoinDetials(id: String) async throws -> CoinDetial?
+}
+class CoinDataService: CoinServiceProtocol, HTTPDataDownloader {
     
     func fetchCoins()  async throws -> [Coin] {
         guard let endpoint = allCoinsURLString else {

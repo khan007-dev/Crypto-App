@@ -23,6 +23,7 @@
 		C97F0F472B8359A000F1BB57 /* CoinDetialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F0F462B8359A000F1BB57 /* CoinDetialViewModel.swift */; };
 		C97F0F4C2B84976800F1BB57 /* HTTPDataDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F0F4B2B84976800F1BB57 /* HTTPDataDownloader.swift */; };
 		C97F0F4F2B84EAC400F1BB57 /* CoinDetialCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F0F4E2B84EAC400F1BB57 /* CoinDetialCache.swift */; };
+		C97F0F512B85E8C200F1BB57 /* MockCoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F0F502B85E8C200F1BB57 /* MockCoinService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		C97F0F462B8359A000F1BB57 /* CoinDetialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetialViewModel.swift; sourceTree = "<group>"; };
 		C97F0F4B2B84976800F1BB57 /* HTTPDataDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPDataDownloader.swift; sourceTree = "<group>"; };
 		C97F0F4E2B84EAC400F1BB57 /* CoinDetialCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetialCache.swift; sourceTree = "<group>"; };
+		C97F0F502B85E8C200F1BB57 /* MockCoinService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoinService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				C97F0F392B80B23400F1BB57 /* CoinDataService.swift */,
+				C97F0F502B85E8C200F1BB57 /* MockCoinService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C97F0F512B85E8C200F1BB57 /* MockCoinService.swift in Sources */,
 				C97F0F3A2B80B23400F1BB57 /* CoinDataService.swift in Sources */,
 				C97F0EF82B7C280C00F1BB57 /* ContentView.swift in Sources */,
 				C97F0F252B7C35CB00F1BB57 /* CoinsViewModel.swift in Sources */,

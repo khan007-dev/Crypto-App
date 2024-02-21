@@ -12,6 +12,7 @@ struct FectchingCoinsApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView(service: CoinDataService())
+//            ContentView(service: MockCoinService()) // Mark: Just for Testing Purposes
         }
     }
 }
