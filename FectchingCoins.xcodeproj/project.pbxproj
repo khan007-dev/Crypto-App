@@ -24,6 +24,7 @@
 		C97F0F4C2B84976800F1BB57 /* HTTPDataDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F0F4B2B84976800F1BB57 /* HTTPDataDownloader.swift */; };
 		C97F0F4F2B84EAC400F1BB57 /* CoinDetialCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F0F4E2B84EAC400F1BB57 /* CoinDetialCache.swift */; };
 		C97F0F512B85E8C200F1BB57 /* MockCoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F0F502B85E8C200F1BB57 /* MockCoinService.swift */; };
+		C97F0F542B8748E600F1BB57 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97F0F522B87443000F1BB57 /* TestData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		C97F0F4B2B84976800F1BB57 /* HTTPDataDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPDataDownloader.swift; sourceTree = "<group>"; };
 		C97F0F4E2B84EAC400F1BB57 /* CoinDetialCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetialCache.swift; sourceTree = "<group>"; };
 		C97F0F502B85E8C200F1BB57 /* MockCoinService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoinService.swift; sourceTree = "<group>"; };
+		C97F0F522B87443000F1BB57 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				C97F0F062B7C280F00F1BB57 /* FectchingCoinsTests.swift */,
+				C97F0F522B87443000F1BB57 /* TestData.swift */,
 			);
 			path = FectchingCoinsTests;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C97F0F072B7C280F00F1BB57 /* FectchingCoinsTests.swift in Sources */,
+				C97F0F542B8748E600F1BB57 /* TestData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
