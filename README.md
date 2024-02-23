@@ -33,6 +33,7 @@ To use the crypto application, follow these steps:
 3. Build and run the application using your preferred development environment or IDE.
 4. Explore the various features and functionalities offered by the application, such as fetching coins, caching data, and pagination.
 
+
 ## Contributing
 Contributions to the development of the crypto application are welcome! If you encounter any issues, have suggestions for improvements, or would like to contribute new features, please submit a pull request or open an issue on the project's GitHub repository.
 
