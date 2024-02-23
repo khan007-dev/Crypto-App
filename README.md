@@ -36,7 +36,7 @@ To use the crypto application, follow these steps:
 <table>
   <tr>
     <td><img src="https://github.com/abwaris19/Crypto-App/assets/143792601/ea1ec92a-6bda-4f4d-8cd8-1a5825a65714" width="200"></td>
-    <td><img src=" https://github.com/abwaris19/Crypto-App/assets/143792601/08394746-1b05-46ad-a9bf-ce97dd1ea912" width="200"></td>
+    <td><img src="https://github.com/abwaris19/Crypto-App/assets/143792601/08394746-1b05-46ad-a9bf-ce97dd1ea912" width="200"></td>
   </tr>
 
 </table>
