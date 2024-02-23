@@ -33,6 +33,15 @@ To use the crypto application, follow these steps:
 3. Build and run the application using your preferred development environment or IDE.
 4. Explore the various features and functionalities offered by the application, such as fetching coins, caching data, and pagination.
 
+<table>
+  <tr>
+    <td><img src="![Simulator Screenshot - iPhone 15 Pro - 2024-02-23 at 09 21 19](https://github.com/abwaris19/Crypto-App/assets/143792601/ea1ec92a-6bda-4f4d-8cd8-1a5825a65714)" width="200"></td>
+    <td><img src="  </tr>![Simulator Screenshot - iPhone 15 Pro - 2024-02-23 at 09 21 24](https://github.com/abwaris19/Crypto-App/assets/143792601/08394746-1b05-46ad-a9bf-ce97dd1ea912)" width="200"></td>
+
+
+
+
+</table>
 
 ## Contributing
 Contributions to the development of the crypto application are welcome! If you encounter any issues, have suggestions for improvements, or would like to contribute new features, please submit a pull request or open an issue on the project's GitHub repository.
